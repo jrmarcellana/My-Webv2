@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcellana's Portfolio</title>
+    <title>JR.Marcellana's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- HEADER SITE -->
     <header>
-        <div class="logo"><span>P</span>ortfolio.</div>
+        <div class="logo"><a href="#home"><span>P</span>ortfolio.</a></div>
         <ul class="navlist">
             <li><a href="#home" style="--i:1;">Home</a></li>
             <li><a href="#about" style="--i:2;">About</a></li>
@@ -94,7 +94,7 @@
             <p>Good-hearted individual on a journey to make a positive impact in the world. From a young age, I've been driven by a deep-seated desire to help others and contribute to the greater good. This passion has guided me through various experiences and challenges, shaping me into the person I am today. With a strong sense of empathy and a belief in the power of kindness, I strive to make meaningful connections and inspire those around me. Join me on this journey as we navigate through life's ups and downs, always striving to make a difference, no matter how small.</p>
 
             <div class="btn-box">
-                <a href="#" class="btn">Read More!</a>
+                <a href="#about" class="btn">Read More!</a>
             </div>
         </div>
     </section>
@@ -112,7 +112,7 @@
                 <h3>Photographer</h3>
                 <p>I offer professional services that capture the essence of your subject matter. From portraits to landscapes, my goal is to create captivating images that tell a story and evoke emotion.</p>
                 <div class="btn-box service-btn">
-                    <a href="#" class="btn">Read More</a>
+                    <a href="#services" class="btn">Read More</a>
                 </div>
             </div>
 
@@ -121,7 +121,7 @@
                 <h3>Graphic Designer</h3>
                 <p>Eye-catching graphic designs that capture your brand's essence. From logos to marketing materials, I craft visuals that make an impact and resonate with your audience.</p>
                 <div class="btn-box service-btn">
-                    <a href="#" class="btn">Read More</a>
+                    <a href="#services" class="btn">Read More</a>
                 </div>
             </div>
 
@@ -130,7 +130,7 @@
                 <h3>Programmer</h3>
                 <p>I provide innovative solutions to your technical challenges. From website development to software applications, I specialize in creating efficient and user-friendly solutions that meet your unique needs.</p>
                 <div class="btn-box service-btn">
-                    <a href="#" class="btn">Read More</a>
+                    <a href="#services" class="btn">Read More</a>
                 </div>
             </div>
         </div>
@@ -259,7 +259,7 @@
                     <div class="port-content">
                         <h3>Landscapes</h3>
                         <p>Exploring the world through my lens, capturing moments that inspire and tell stories.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <a href="#portfolio"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -270,7 +270,7 @@
                     <div class="port-content">
                         <h3>Events</h3>
                         <p>A collection of images that reflect my passion for photography, showcasing beauty in the ordinary.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <a href="#portfolio"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -281,7 +281,7 @@
                     <div class="port-content">
                         <h3>Products</h3>
                         <p>Transforming ideas into visual stories, blending creativity with design precision.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <a href="#portfolio"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -292,7 +292,7 @@
                     <div class="port-content">
                         <h3>Graphics</h3>
                         <p>A showcase of my graphic design projects, where each concept is a unique journey of colors and shapes.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <a href="#portfolio"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -303,7 +303,7 @@
                     <div class="port-content">
                         <h3>Websites</h3>
                         <p>My programming projects demonstrate my problem-solving skills and passion for creating functional, innovative solutions.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <a href="#portfolio"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -314,7 +314,7 @@
                     <div class="port-content">
                         <h3>Applications</h3>
                         <p>Explore my coding journey through projects that showcase my versatility in languages and technologies.</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
+                        <a href="#portfolio"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
             </div>
@@ -327,23 +327,25 @@
             <span>ask me question</span>
             <h2>Contact Me!</h2>
         </div>
-
-        <form action="#" class="scroll-bottom">
-            <input type="text" placeholder="Your Name">
-            <input type="text" placeholder="Your Email">
-            <input type="text" placeholder="Your Address">
-            <input type="number" placeholder="Phone Number">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+    
+        <form action="#" class="scroll-bottom" name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <input type="text" name="Address" placeholder="Your Address" required>
+            <input type="tel" name="Number" placeholder="Phone Number">
+            <textarea name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <div class="btn-box formBtn">
-                <button type="Submit" class="btn">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </div>
         </form>
+    
+        <div id="msg">Message sent successfully</div>
     </section>
-
+    
     <!-- FOOTER SECTION -->
     <footer>
         <p class="scroll-scale">Copyright &copy; 2023 by JReymarkM || All Right Reserved.</p>
-        <a href="#home"><i class='bx bx-arrow-to-top'></i></a>
+        <a href="#home"><i class='bx bxs-chevron-up'></i></a>
     </footer>
 
     <script src="mixitup.min.js"></script>

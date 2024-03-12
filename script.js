@@ -41,20 +41,20 @@ setInterval(changeText, 3000);
 // CIRCLE SKILL
 const circles = document.querySelectorAll('.circle');
 circles.forEach(elem => {
-    var dots = parseInt(elem.getAttribute("data-dots")); // Added parseInt to convert string to number
-    var marked = parseInt(elem.getAttribute("data-percent")); // Added parseInt to convert string to number
+    var dots = parseInt(elem.getAttribute("data-dots"));
+    var marked = parseInt(elem.getAttribute("data-percent"));
     var percent = Math.floor(dots * marked / 100);
     var points = "";
     var rotate = 360 / dots;
 
-    for(let i = 0; i < dots; i++) { // Changed , to < in the loop condition
-        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`; // Fixed string interpolation and added backticks
+    for(let i = 0; i < dots; i++) {
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
     }
     elem.innerHTML = points;
 
-    const pointsMarked = elem.querySelectorAll('.points'); // Added backtick
+    const pointsMarked = elem.querySelectorAll('.points');
     for(let i = 0; i < percent ; i++) {
-        pointsMarked[i].classList.add('marked'); // Added semicolon and closed quotes
+        pointsMarked[i].classList.add('marked');
     }
 });
 
@@ -95,6 +95,24 @@ window.onscroll = () => {
     menuIcon.classList.remove("bx-x");
     navlist.classList.remove("open");
 }
+
+// CONTACT SENDER
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxhvKWkV6YTdJll4BHT9ER-VVvoUoG7uKm-VJ4hwdZW1EWXNc18M4XXLLzOueY_ffayYw/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.style.display = "block";
+            setTimeout(function () {
+                msg.style.display = "none";
+            }, 3000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+})
 
 // PARALLAX
 const observer = new IntersectionObserver((entries) => {

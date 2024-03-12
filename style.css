@@ -839,14 +839,14 @@ footer a:hover {
 
 .scroll-bottom {
     opacity: 0;
-    transform: translateY(300px);
+    transform: translateY(150px);
     transition: 2s;
 }
 
 .scroll-top {
     opacity: 0;
-    transform: translateY(-300px);
-    transition: 3s;
+    transform: translateY(-150px);
+    transition: 2.5s;
 }
 
 .show-items {
